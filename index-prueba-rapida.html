@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 PRUEBA RÁPIDA - Avatares Interactivos</title>
+    <meta name="description" content="Versión de prueba rápida sin backend">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Banner de prueba */
+        .test-banner {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #000;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .test-banner strong {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Test Banner -->
+    <div class="test-banner">
+        🧪 <strong>VERSIÓN DE PRUEBA RÁPIDA</strong> - Sin backend, API key visible (solo para testing)
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-icon">🎭</span>
+                Avatares Interactivos - PRUEBA
+            </h1>
+            <p class="tagline">Prueba rápida sin instalar Node.js</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Grid View -->
+            <section id="grid-view" class="grid-view">
+                <h2 class="section-title">Selecciona un Avatar para Probar</h2>
+                <div id="avatars-grid" class="avatars-grid">
+                    <!-- Los avatares se cargarán dinámicamente aquí -->
+                </div>
+            </section>
+
+            <!-- Chat View (oculto inicialmente) -->
+            <section id="chat-view" class="chat-view hidden">
+                <div class="chat-container">
+                    <!-- Video Container -->
+                    <div class="video-container">
+                        <div id="video-wrapper" class="video-wrapper">
+                            <div class="loading-state">
+                                <div class="spinner"></div>
+                                <p>Conectando con el avatar...</p>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="video-controls">
+                            <button id="toggle-mic" class="control-btn" title="Micrófono">
+                                <span class="icon">🎤</span>
+                            </button>
+                            <button id="disconnect-btn" class="control-btn disconnect" title="Desconectar">
+                                <span class="icon">❌</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chat Info -->
+                    <div class="chat-info">
+                        <div class="avatar-info">
+                            <h3 id="current-avatar-name">Avatar</h3>
+                            <span class="status-badge" id="connection-status">Conectando...</span>
+                        </div>
+                        <div class="chat-stats">
+                            <div class="stat">
+                                <span class="stat-label">Estado:</span>
+                                <span class="stat-value" id="avatar-state">Inicializando</span>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top: 2rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; border: 1px solid rgba(251, 191, 36, 0.3);">
+                            <p style="font-size: 0.875rem; color: #fbbf24;">
+                                💡 <strong>Tip:</strong> Acepta los permisos de micrófono cuando te lo pida el
+                                navegador. Luego habla con el avatar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🧪 Versión de prueba rápida - Si funciona, procederemos con la versión final con backend seguro</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/livekit-client/dist/livekit-client.umd.min.js"></script>
+    <script src="app-prueba-rapida.js"></script>
+</body>
+
+</html>
